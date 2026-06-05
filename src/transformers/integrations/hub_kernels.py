@@ -102,6 +102,14 @@ if is_kernels_available():
         #        version=1,
         #    )
         # },
+        "ESMFold2TriangleMultiplication": {
+            "cuda": {
+                Mode.INFERENCE: LayerRepository(
+                    repo_id="Rocketknight1/esmfold2-trimul-kernel",
+                    layer_name="ESMFold2TriangleMultiplication",
+                ),
+            },
+        },
         "SwiGLUMLP": {
             "cuda": {
                 Mode.INFERENCE | Mode.TORCH_COMPILE: LayerRepository(
